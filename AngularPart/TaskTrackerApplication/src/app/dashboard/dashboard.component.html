@@ -1,16 +1,39 @@
 <main>
-    <div class="MainDiv">
-        <div class="SubDiv1">
-            <div><input type="text" placeholder="Title"></div>
-            <div><textarea name="" id="" placeholder="Description"></textarea></div>
-            <Select>
-                <option value="Low">Low</option>
-                <option value="Moderate">Moderate</option>
-                <option value="High">High</option>
-            </Select>
-        </div>
-        <div class="SubDiv2">
-            
-        </div>
+  <div class="MainDiv">
+    <div class="SubDiv1">
+      <div><input type="text" placeholder="Title" /></div>
+      <div><textarea name="" id="" placeholder="Description"></textarea></div>
+      <Select>
+        <option value="Low">Low</option>
+        <option value="Moderate">Moderate</option>
+        <option value="High">High</option>
+      </Select>
     </div>
+    <div class="SubDiv2">
+      <table>
+        <caption>
+          Task List
+        </caption>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of TaskData">
+            <td>{{ data.title }}</td>
+            <td>{{ data.taskDetails }}</td>
+            <td>{{ data.taskStatus }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="SubDiv3">
+      <button>Add </button>
+      <button>Delete </button>
+      <button>Update</button>
+    </div>
+  </div>
 </main>
